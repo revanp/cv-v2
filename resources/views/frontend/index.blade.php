@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="{{ asset('public/assets/css/feature.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
 </head>
-<body class="template-color-1 spybody" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
+<body class="template-color-1 spybody white-version" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
+    {{-- HEADER --}}
     <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
         <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
             <div class="col-lg-2 col-6">
@@ -57,6 +58,7 @@
         </div>
     </header>
 
+    {{-- MOBILE POP UP --}}
     <div class="popup-mobile-menu">
         <div class="inner" style="padding-left: 30px; height: inherit">
             <div class="menu-top">
@@ -70,8 +72,8 @@
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                {{-- <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
-                </p> --}}
+                <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
+                </p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills onepagenav">
@@ -80,7 +82,6 @@
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
                 </ul>
-                <!-- social sharea area -->
                 <div class="social-share-style-1 mt--40">
                     <span class="title">find with me</span>
                     <ul class="social-share d-flex liststyle">
@@ -88,7 +89,7 @@
                                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                                 </svg></a>
                         </li>
-                        <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                        <li class="instagram"><a href="https://instagram.com/revan.pratamas" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -102,10 +103,71 @@
                         </li>
                     </ul>
                 </div>
-                <!-- end -->
             </div>
         </div>
     </div>
+
+    {{-- CONTENT --}}
+    <main class="main-page-wrapper">
+        <div id="home" class="rn-slide-area">
+            <div class="slide slider-style-3">
+                <div class="container">
+                    <div class="row slider-wrapper">
+                        <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+                            <div class="slider-info">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-12">
+                                        <div class="user-info-top">
+                                            <div class="user-info-header">
+                                                <div class="user">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                                <h2 class="title">
+                                                    Hi, I’m <span>REVAN</span>
+                                                </h2>
+                                                <p class="disc">Back-End Developer and working for MODENA Indonesia in Jakarta, Indonesia</p>
+                                            </div>
+                                            <div class="user-info-footer">
+                                                <div class="info">
+                                                    <i data-feather="file"></i>
+                                                    <span>Back-End Developer & Fullstack Developer</span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="mail"></i>
+                                                    <span>revanp0@gmail.com</span>
+                                                </div>
+                                                <div class="info">
+                                                    <i data-feather="map-pin"></i>
+                                                    <span>Jakarta, ID</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-12">
+                                    <div class="user-info-bottom">
+                                        <span>Download my curriculum vitae: </span>
+                                        <div class="button-wrapper d-flex">
+                                            <a class="rn-btn mr--30" href="#contacts"><span>DOWNLOAD CV</span></a>
+                                            <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
+                            <div class="background-image-area">
+                                <div class="thumbnail-image">
+                                    <img src="{{ asset('public/assets/img/profile.JPG') }}" alt="Personal Portfolio">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="{{ asset('public/assets/js/jquery.js') }}"></script>
     <script src="{{ asset('public/assets/js/modernizer.min.js') }}"></script>
