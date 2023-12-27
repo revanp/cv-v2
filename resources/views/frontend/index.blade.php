@@ -180,15 +180,35 @@
                 <div class="row text-center justify-content-center">
                     <div class="inner slide col-lg-8 col-md-12">
                         <div class="skill-share-inner pt--80">
-                            <span class="title">Primary Skills on</span>
+                            <span class="title">Best Skills on</span>
                             <ul class="skill-share liststyle">
-                                <li><img src="{{ asset('public/assets/img/icon/reactjs.svg') }}" alt="ReactJS"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/php.svg') }}" alt="PHP"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/reactjs.svg') }}" alt="ReactJS"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/laravel.svg') }}" alt="Laravel"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/docker.svg') }}" alt="Docker"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/kubernetes.svg') }}" alt="Kubernetes"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/centos.svg') }}" alt="CentOS"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/ubuntu.svg') }}" alt="Ubuntu"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/js.svg') }}" alt="Javascript"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/flutter.svg') }}" alt="Flutter"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/python.svg') }}" alt="Python"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/mysql.svg') }}" alt="MySQL"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/postgresql.svg') }}" alt="PostgreSQL"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/mongodb.svg') }}" alt="MongoDB"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/html5.svg') }}" alt="HTML 5"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/jenkins.svg') }}" alt="Jenkins"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/css.svg') }}" alt="CSS"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/sqlserver.svg') }}" alt="Microsoft SQL Server"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/apache.svg') }}" alt="Apache"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/nginx.svg') }}" alt="Nginx"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/codeigniter.svg') }}" alt="Codeigniter"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/cakephp.svg') }}" alt="CakePHP"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/bootstrap.svg') }}" alt="Bootstrap"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/tailwind.svg') }}" alt="Tailwind"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/git.svg') }}" alt="Git"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/npm.svg') }}" alt="NPM"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/figma.svg') }}" alt="Figma"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/wordpress.svg') }}" alt="Wordpress"></li>
                             </ul>
                         </div>
                     </div>
@@ -196,100 +216,103 @@
             </div>
         </div>
 
-
-        {{-- <div id="experiences" class="rn-experience-area section-separator rn-section-gap">
+        <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Over 5 years of experience</span>
-                            <h2 class="title">My Experiences</h2>
+                        <div class="section-title text-center">
+                            <span class="subtitle">Contact</span>
+                            <h2 class="title">Contact With Me</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row mt--10">
-                    <div class="col-12 mt_experience">
 
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Rainbow - Themes.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
+                <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+                    <div class="col-lg-5">
+                        <div class="contact-about-area">
+                            <div class="thumbnail">
+                                <img src="{{ asset('public/assets/img/handshake.jpg') }}" alt="contact-img">
                             </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                            <div class="title-area">
+                                <h4 class="title">Revan Pratama</h4>
+                                <span>Back-End Developer</span>
+                            </div>
+                            <div class="description">
+                                <p>I am available for fulltime and freelance work. Connect with me via and feel free to send me an email.
+                                </p>
+                                <span class="mail">Email: <a href="mailto:revanp0@gmail.com">revanp0@gmail.com</a></span>
+                            </div>
+                            <div class="social-area">
+                                <div class="name">FIND WITH ME</div>
+                                <div class="social-icone">
+                                    <a href="#"><i data-feather="facebook"></i></a>
+                                    <a href="#"><i data-feather="linkedin"></i></a>
+                                    <a href="https://instagram.com/revan.pratamas" target="_BLANK"><i data-feather="instagram"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <!-- single skills -->
+                    </div>
+                    <div data-aos-delay="600" class="col-lg-7 contact-input">
+                        <div class="contact-form-wrapper">
+                            <div class="introduce">
+                                <form class="rnt-contact-form row" id="contact-form" method="POST" action="{{ url('contact') }}">
+                                    @csrf
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-name">Your Name</label>
+                                            <input class="form-control form-control-lg" name="name" id="contact-name" type="text">
+                                        </div>
+                                    </div>
 
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-02.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        App Development.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-phone">Phone Number</label>
+                                            <input class="form-control" name="phone_number" id="contact-phone" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-email">Email</label>
+                                            <input class="form-control form-control-sm" id="contact-email" name="email" type="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="subject">subject</label>
+                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-message">Your Message</label>
+                                            <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <button name="submit" type="submit" id="submit" class="rn-btn">
+                                            <span>SEND MESSAGE</span>
+                                            <i data-feather="arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <!-- single skills -->
-
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-03.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Application Management.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     </main>
+
+    {{-- FOOTER --}}
+    <div id="footer" class="rn-footer-area footer-style-2">
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">© 2023. All rights reserved by <a target="_blank" href="https://www.revanpratama.online">REVAN PRATAMA</a></p>
+        </div>
+    </div>
 
     <script src="{{ asset('public/assets/js/jquery.js') }}"></script>
     <script src="{{ asset('public/assets/js/modernizer.min.js') }}"></script>
