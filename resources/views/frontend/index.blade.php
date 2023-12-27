@@ -167,6 +167,128 @@
                 </div>
             </div>
         </div>
+
+        <div class="section-separator rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
+                            <h2 class="title">My Skills</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="inner slide col-lg-8 col-md-12">
+                        <div class="skill-share-inner pt--80">
+                            <span class="title">Primary Skills on</span>
+                            <ul class="skill-share liststyle">
+                                <li><img src="{{ asset('public/assets/img/icon/reactjs.svg') }}" alt="ReactJS"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/php.svg') }}" alt="PHP"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/laravel.svg') }}" alt="Laravel"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/docker.svg') }}" alt="Docker"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/kubernetes.svg') }}" alt="Kubernetes"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/centos.svg') }}" alt="CentOS"></li>
+                                <li><img src="{{ asset('public/assets/img/icon/ubuntu.svg') }}" alt="Ubuntu"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {{-- <div id="experiences" class="rn-experience-area section-separator rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
+                            <span class="subtitle">Over 5 years of experience</span>
+                            <h2 class="title">My Experiences</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--10">
+                    <div class="col-12 mt_experience">
+
+                        <!-- single skills -->
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
+                            <div class="experience-left">
+                                <div class="experience-image">
+                                    <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio">
+                                </div>
+                                <div class="experience-center">
+                                    <span class="date">2015-Present</span>
+                                    <h4 class="experience-title">
+                                        Rainbow - Themes.
+                                    </h4>
+                                    <h6 class="subtitle">
+                                        Co-Founder, Web Designer & Developer
+                                    </h6>
+                                    <p class="disc">Reinvetning the way you create websites</p>
+                                </div>
+                            </div>
+                            <div class="experience-right">
+                                <div class="experience-footer">
+                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single skills -->
+
+                        <!-- single skills -->
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="experience-style-two">
+                            <div class="experience-left">
+                                <div class="experience-image">
+                                    <img src="assets/images/portfolio/portfolio-02.jpg" alt="Personal Portfolio">
+                                </div>
+                                <div class="experience-center">
+                                    <span class="date">2015-Present</span>
+                                    <h4 class="experience-title">
+                                        App Development.
+                                    </h4>
+                                    <h6 class="subtitle">
+                                        Co-Founder, Web Designer & Developer
+                                    </h6>
+                                    <p class="disc">Reinvetning the way you create websites</p>
+                                </div>
+                            </div>
+                            <div class="experience-right">
+                                <div class="experience-footer">
+                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single skills -->
+
+                        <!-- single skills -->
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="experience-style-two">
+                            <div class="experience-left">
+                                <div class="experience-image">
+                                    <img src="assets/images/portfolio/portfolio-03.jpg" alt="Personal Portfolio">
+                                </div>
+                                <div class="experience-center">
+                                    <span class="date">2015-Present</span>
+                                    <h4 class="experience-title">
+                                        Application Management.
+                                    </h4>
+                                    <h6 class="subtitle">
+                                        Co-Founder, Web Designer & Developer
+                                    </h6>
+                                    <p class="disc">Reinvetning the way you create websites</p>
+                                </div>
+                            </div>
+                            <div class="experience-right">
+                                <div class="experience-footer">
+                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single skills -->
+
+                    </div>
+                </div>
+            </div>
+        </div> --}}
     </main>
 
     <script src="{{ asset('public/assets/js/jquery.js') }}"></script>
