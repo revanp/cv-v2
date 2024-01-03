@@ -148,7 +148,7 @@
                                     <div class="user-info-bottom">
                                         <span>Download my curriculum vitae: </span>
                                         <div class="button-wrapper d-flex">
-                                            <a class="rn-btn mr--30" href="#contacts"><span>DOWNLOAD CV</span></a>
+                                            <a class="rn-btn mr--30" href="{{ url('cv') }}"><span>DOWNLOAD CV</span></a>
                                             <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
                                         </div>
                                     </div>
