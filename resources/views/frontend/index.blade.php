@@ -36,7 +36,7 @@
                         <ul class="primary-menu nav nav-pills">
                             <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#skills">Skills</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
                         </ul>
                     </nav>
@@ -130,7 +130,7 @@
                                             <div class="user-info-footer">
                                                 <div class="info">
                                                     <i data-feather="file"></i>
-                                                    <span>Back-End Developer & Fullstack Developer</span>
+                                                    <span>Back-End Developer</span>
                                                 </div>
                                                 <div class="info">
                                                     <i data-feather="mail"></i>
@@ -210,6 +210,45 @@
                                 <li><img src="{{ asset('public/assets/img/icon/figma.svg') }}" alt="Figma"></li>
                                 <li><img src="{{ asset('public/assets/img/icon/wordpress.svg') }}" alt="Wordpress"></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio" class="rn-portfolio-area portfolio-style-three rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
+                            <span class="subtitle">Visit my portfolio and keep your feedback</span>
+                            <h2 class="title">My Portfolio</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--25 mt_md--5 mt_sm--5">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
+
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="{{ asset('public/assets/img/portfolio.jpg') }}" alt="Personal Portfolio Images">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">PHOTOSHOP</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">The services provide for design</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -311,6 +350,53 @@
     <div id="footer" class="rn-footer-area footer-style-2">
         <div class="copyright text-center ptb--40 section-separator">
             <p class="description">© 2023. All rights reserved by <a target="_blank" href="https://www.revanpratama.online">REVAN PRATAMA</a></p>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Featured - Design</span> App Design Development.
+                                </h3>
+                                <p class="mb--30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
+                                <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
+                                <div class="button-group mt--20">
+                                    <a href="#" class="rn-btn thumbs-icon">
+                                        <span>LIKE THIS</span>
+                                        <i data-feather="thumbs-up"></i>
+                                    </a>
+                                    <a href="#" class="rn-btn">
+                                        <span>VIEW PROJECT</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
         </div>
     </div>
 

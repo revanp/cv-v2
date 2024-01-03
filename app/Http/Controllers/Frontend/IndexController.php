@@ -13,6 +13,13 @@ class IndexController extends Controller
         return view('frontend.index');
     }
 
+    public function cv()
+    {
+        $cv = public_path('cv.pdf');
+
+        return response()->file($cv);
+    }
+
     public function store(Request $request)
     {
         $data = $request->all();
