@@ -158,7 +158,7 @@
                         <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
                             <div class="background-image-area">
                                 <div class="thumbnail-image">
-                                    <img src="{{ asset('public/assets/img/profile.JPG') }}" alt="Personal Portfolio">
+                                    <img src="{{ asset('public/assets/img/profile.jpg') }}" alt="Personal Portfolio">
                                 </div>
                             </div>
                         </div>
