@@ -26,5 +26,10 @@ Route::group(['prefix' => 'admin-cms'], function(){
             Route::put('change-status', [App\Http\Controllers\Backend\PortofolioController::class, 'changeStatus']);
             Route::get('delete/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'delete']);
         });
+
+        Route::group(['prefix' => 'form-contact-us'], function(){
+            Route::get('', [App\Http\Controllers\Backend\FormContactUsController::class, 'index']);
+            Route::post('datatable', [App\Http\Controllers\Backend\FormContactUsController::class, 'index']);
+        });
     });
 });

@@ -21,6 +21,9 @@
                 <li class="menu-item {{ (request()->is('admin-cms/portofolio') ||  request()->is('admin-cms/portofolio/*')) ? 'menu-item-active' : '' }}" aria-haspopup="true" >
                     <a href="{{ url('admin-cms/portofolio') }}" class="menu-link "><i class="flaticon2-soft-icons-1 menu-icon"></i><span class="menu-text">Portofolio</span></a>
                 </li>
+                <li class="menu-item {{ (request()->is('admin-cms/form-contact-us')) ? 'menu-item-active' : '' }}" aria-haspopup="true" >
+                    <a href="{{ url('admin-cms/form-contact-us') }}" class="menu-link "><i class="flaticon2-pen menu-icon"></i><span class="menu-text">Form Contact Us</span></a>
+                </li>
             </ul>
         </div>
     </div>
