@@ -13,6 +13,8 @@ class Portofolio extends Model
         'category',
         'url',
         'description',
+        'sort',
+        'is_active',
     ];
 
     public function image()

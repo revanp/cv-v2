@@ -16,7 +16,14 @@ Route::group(['prefix' => 'admin-cms'], function(){
         Route::get('', [App\Http\Controllers\Backend\DashboardController::class, 'index']);
 
         Route::group(['prefix' => 'portofolio'], function(){
-
+            Route::get('', [App\Http\Controllers\Backend\PortofolioController::class, 'index']);
+            Route::post('datatable', [App\Http\Controllers\Backend\PortofolioController::class, 'index']);
+            Route::get('create', [App\Http\Controllers\Backend\PortofolioController::class, 'create']);
+            Route::post('create', [App\Http\Controllers\Backend\PortofolioController::class, 'store']);
+            Route::get('edit/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'edit']);
+            Route::put('edit/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'update']);
+            Route::put('change-status', [App\Http\Controllers\Backend\PortofolioController::class, 'changeStatus']);
+            Route::get('delete/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'delete']);
         });
     });
 });

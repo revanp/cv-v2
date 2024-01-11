@@ -15,10 +15,10 @@
     <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
 		<div id="kt_aside_menu" class="aside-menu my-4 " data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
             <ul class="menu-nav">
-				<li class="menu-item" aria-haspopup="true" >
+				<li class="menu-item {{ request()->is('admin-cms') ? 'menu-item-active' : '' }}" aria-haspopup="true" >
                     <a href="{{ url('admin-cms') }}" class="menu-link "><i class="flaticon2-website menu-icon"></i><span class="menu-text">Dashboard</span></a>
                 </li>
-                <li class="menu-item" aria-haspopup="true" >
+                <li class="menu-item {{ (request()->is('admin-cms/portofolio') ||  request()->is('admin-cms/portofolio/*')) ? 'menu-item-active' : '' }}" aria-haspopup="true" >
                     <a href="{{ url('admin-cms/portofolio') }}" class="menu-link "><i class="flaticon2-soft-icons-1 menu-icon"></i><span class="menu-text">Portofolio</span></a>
                 </li>
             </ul>

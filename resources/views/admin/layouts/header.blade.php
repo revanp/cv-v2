@@ -22,7 +22,7 @@
 				<div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
                     <ul class="navi navi-hover py-4">
                         <li class="navi-item">
-                            <a href="{{ url('admin/logout') }}" class="navi-link">
+                            <a href="{{ url('admin-cms/logout') }}" class="navi-link">
                                 <span class="symbol symbol-20 mr-3"><i class="flaticon-logout"></i></span>
                                 <span class="navi-text">Logout</span>
                             </a>
