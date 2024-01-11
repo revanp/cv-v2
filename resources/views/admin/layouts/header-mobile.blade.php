@@ -1,14 +1,10 @@
 <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed " >
-	<a href="{{ url('admin') }}">
-		<img alt="Logo" src="{{ asset('backend/media/logos/MODENA-Culinaria-Logo.svg') }}"/>
-	</a>
+	<a href="{{ url('admin-cms') }}" style="display: block; color: #0d1013; text-transform: uppercase; letter-spacing: 6px; font-size: 14px; font-weight: 700; text-decoration: none;">
+        REVAN.
+    </a>
 
 	<div class="d-flex align-items-center">
 			<button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
-				<span></span>
-			</button>
-
-			<button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
 				<span></span>
 			</button>
 
