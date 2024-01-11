@@ -32,7 +32,7 @@
             imJs.onePageNav();
         },
 
-        
+
         activePopupDemo: function (e) {
             $('.popuptab-area li a.demo-dark').on('click', function (e) {
                 $('.demo-modal-area').addClass('dark-version');
@@ -88,8 +88,8 @@
 			});
         },
 
-        
-        
+
+
         wowActive: function () {
             new WOW().init();
         },
@@ -136,8 +136,8 @@
                 arrows: true,
                 adaptiveHeight: true,
                 cssEase: 'linear',
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
+                prevArrow: '<button class="slide-arrow prev-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M11 4.5L4.56066 10.9393C3.97487 11.5251 3.97487 12.4749 4.56066 13.0607L11 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M4.5 12L20.5 12"/></svg></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13 4.5L19.4393 10.9393C20.0251 11.5251 20.0251 12.4749 19.4393 13.0607L13 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M19.5 12L3.5 12"/></svg></button>'
             });
 
             $('.testimonial-item-one').slick({
@@ -168,8 +168,8 @@
                 arrows: true,
                 cssEase: 'linear',
                 adaptiveHeight: true,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M11 4.5L4.56066 10.9393C3.97487 11.5251 3.97487 12.4749 4.56066 13.0607L11 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M4.5 12L20.5 12"/></svg></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13 4.5L19.4393 10.9393C20.0251 11.5251 20.0251 12.4749 19.4393 13.0607L13 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M19.5 12L3.5 12"/></svg></button>',
                 responsive: [{
                         breakpoint: 1124,
                         settings: {
@@ -205,8 +205,8 @@
                 arrows: true,
                 cssEase: 'linear',
                 adaptiveHeight: true,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M11 4.5L4.56066 10.9393C3.97487 11.5251 3.97487 12.4749 4.56066 13.0607L11 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M4.5 12L20.5 12"/></svg></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13 4.5L19.4393 10.9393C20.0251 11.5251 20.0251 12.4749 19.4393 13.0607L13 19.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2" d="M19.5 12L3.5 12"/></svg></button>',
                 responsive: [{
                         breakpoint: 1124,
                         settings: {
@@ -324,7 +324,7 @@
                     $(scrollTop).css('opacity', '0');
                 }
             });
-            
+
             //Click event to scroll to top
             $(scrollTop).on('click', function () {
                 $('html, body').animate({

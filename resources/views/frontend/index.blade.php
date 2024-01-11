@@ -37,7 +37,7 @@
                             <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#skills">Skills</a></li>
                             <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact Me</a></li>
                         </ul>
                     </nav>
                     <div class="header-right">
@@ -72,15 +72,14 @@
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
-                </p>
+                <p class="discription">Back-End Developer and working for MODENA Indonesia in Jakarta, Indonesia</p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills onepagenav">
                     <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact Me</a></li>
                 </ul>
                 <div class="social-share-style-1 mt--40">
                     <span class="title">find with me</span>
@@ -148,7 +147,7 @@
                                     <div class="user-info-bottom">
                                         <span>Download my curriculum vitae: </span>
                                         <div class="button-wrapper d-flex">
-                                            <a class="rn-btn mr--30" href="{{ url('cv') }}"><span>DOWNLOAD CV</span></a>
+                                            <a class="rn-btn mr--30" href="{{ url('cv') }}" target="_BLANK"><span>DOWNLOAD CV</span></a>
                                             <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
                                         </div>
                                     </div>
@@ -168,7 +167,7 @@
             </div>
         </div>
 
-        <div class="section-separator rn-section-gap">
+        <div class="section-separator rn-section-gap" id="skills">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -229,22 +228,78 @@
                 <div class="row mt--25 mt_md--5 mt_sm--5">
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
-
                             <div class="rn-portfolio-slick">
                                 <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                     <div class="inner">
                                         <div class="thumbnail">
                                             <a href="javascript:void(0)">
-                                                <img src="{{ asset('public/assets/img/portfolio.jpg') }}" alt="Personal Portfolio Images">
+                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
                                             </a>
                                         </div>
                                         <div class="content">
                                             <div class="category-info">
                                                 <div class="category-list">
-                                                    <a href="javascript:void(0)">PHOTOSHOP</a>
+                                                    <a href="javascript:void(0)">WEBSITE</a>
                                                 </div>
                                             </div>
-                                            <h4 class="title"><a href="javascript:void(0)">The services provide for design</a></h4>
+                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">WEBSITE</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">WEBSITE</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rn-portfolio-slick">
+                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <a href="javascript:void(0)">
+                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="category-info">
+                                                <div class="category-list">
+                                                    <a href="javascript:void(0)">WEBSITE</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
                                         </div>
                                     </div>
                                 </div>
