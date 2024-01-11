@@ -19714,4 +19714,39 @@ body.white-version .rn-btn-ulderline {
     font-weight: 700;
     text-decoration: none;
 }
+
+.loader {
+    animation: rotation 1s linear infinite;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--color-body-white);
+    display: inline-block;
+    left: calc(50% - 24px);
+    top: calc(50% - 24px);
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+}
+
+.loader:after {
+    border-bottom: 4px solid var(--color-subtitle);
+    border-left: 4px solid transparent;
+    content: "";
+    left: 0;
+    top: 0;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 /*# sourceMappingURL=../maps/style.css.map */

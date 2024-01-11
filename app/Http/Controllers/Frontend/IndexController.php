@@ -5,12 +5,20 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\FormContactUs;
+use App\Models\Portofolio;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $portofolio = Portofolio::with([
+            'image'
+        ])
+        ->where('is_active', 1)
+        ->orderBy('sort')
+        ->get();
+
+        return view('frontend.index', compact('portofolio'));
     }
 
     public function cv()
@@ -38,5 +46,15 @@ class IndexController extends Controller
         ]);
 
         return redirect(url(''));
+    }
+
+    public function portofolioDetail($id)
+    {
+        $data = Portofolio::with([
+            'image'
+        ])
+        ->find($id);
+
+        return view('frontend.popup.portofolio', compact('data'))->render();
     }
 }

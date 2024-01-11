@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Portofolio;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
+use Exception;
 
 class PortofolioController extends Controller
 {
@@ -201,6 +202,191 @@ class PortofolioController extends Controller
                 'redirect' => url('admin-cms/portofolio')
             ], 200)->withHeaders([
                 'Content-Type' => 'application/json'
+            ]);
+        }
+    }
+
+    public function edit($id)
+    {
+        $data = Portofolio::with([
+            'image'
+        ])
+        ->find($id);
+
+        $sort = Portofolio::select('sort')->orderBy('sort', 'desc')->first();
+
+        if(!empty($sort)){
+            $sort = $sort->sort;
+        }
+
+        return view('admin.pages.portofolio.edit', compact('sort', 'data'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $data = $request->all();
+
+        unset($data['_token']);
+
+        $rules = [
+            'image' => [],
+            'name' => ['required'],
+            'category' => ['required'],
+            'url' => [],
+            'description' => ['required'],
+        ];
+
+        $messages = [];
+
+        $attributes = [
+            'image' => 'Image',
+            'name' => 'Name',
+            'category' => 'Category',
+            'url' => 'URL',
+            'description' => 'Description',
+        ];
+
+        $validator = Validator::make($data, $rules, $messages, $attributes);
+
+        if($validator->fails()){
+            return response()->json([
+                'code' => 422,
+                'success' => false,
+                'message' => 'Validation error!',
+                'data' => $validator->errors()
+            ], 422)
+                ->withHeaders([
+                    'Content-Type' => 'application/json'
+                ]);
+        }
+
+        $isError = false;
+
+        try{
+            DB::beginTransaction();
+
+            $portofolio = Portofolio::find($id);
+
+            $sort = empty($data['sort']) ? Portofolio::count() + 1 : $data['sort'];
+
+            $portofolio->fill([
+                'name' => $data['name'],
+                'url' => $data['url'],
+                'category' => $data['category'],
+                'description' => $data['description'],
+                'is_active' => !empty($data['is_active']) ? true : false,
+                'sort' => $sort,
+            ])->save();
+
+            $idPortofolio = $portofolio->id;
+
+            if ($request->hasFile('image')) {
+                $this->storeFile(
+                    $request->file('image'),
+                    $portofolio,
+                    'image',
+                    "images/portofolio/{$idPortofolio}",
+                    'image'
+                );
+            }
+
+            $message = 'Portofolio updated successfully';
+
+            DB::commit();
+        }catch (\Illuminate\Database\QueryException $e) {
+            DB::rollBack();
+
+            $isError = true;
+
+            $err     = $e->errorInfo;
+
+            $message =  $err[2];
+        }
+
+        if ($isError == true) {
+            return response()->json([
+                'code' => 500,
+                'success' => false,
+                'message' => $message
+            ], 500)
+                ->withHeaders([
+                    'Content-Type' => 'application/json'
+                ]);
+        }else{
+            session()->flash('success', $message);
+
+            return response()->json([
+                'code' => 200,
+                'success' => true,
+                'message' => $message,
+                'redirect' => url('admin-cms/portofolio')
+            ], 200)->withHeaders([
+                'Content-Type' => 'application/json'
+            ]);
+        }
+    }
+
+    public function changeStatus(Request $request)
+    {
+        $input = $request->all();
+        $isAjax = $request->ajax() ? true : false;
+        $user   = Auth::user();
+
+        unset($input['_token']);
+
+        if($isAjax){
+            $id = $input['id'];
+            $isError = true;
+
+            $status = $input['status'] == '0' ? false : true;
+
+            try {
+                DB::beginTransaction();
+
+                $update = Portofolio::where('id', $id)->update([
+                    'is_active' => $status
+                ]);
+
+                DB::commit();
+
+                return response([
+                    'success' => true,
+                    'code' => 200,
+                    'message' => 'Status has been changed successfully'
+                ]);
+            }catch(Exception $e){
+                DB::rollBack();
+
+                return response([
+                    'success' => false,
+                    'code' => 500,
+                    'message' => 'Something went wrong'
+                ]);
+            }
+        }
+    }
+
+    public function delete($id)
+    {
+        try{
+            DB::beginTransaction();
+
+            $delete = Portofolio::where('id', $id)->delete();
+
+            DB::commit();
+
+            return response([
+                'success' => true,
+                'code' => 200,
+                'message' => 'Data has been deleted'
+            ]);
+        }catch(Exception $e){
+            DB::rollBack();
+
+            return response([
+                'success' => true,
+                'code' => 500,
+                'message' => 'Data failed to deleted'
             ]);
         }
     }

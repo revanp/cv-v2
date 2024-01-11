@@ -228,82 +228,29 @@
                 <div class="row mt--25 mt_md--5 mt_sm--5">
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">WEBSITE</a>
-                                                </div>
+                            @foreach ($portofolio as $key => $val)
+                                <div class="rn-portfolio-slick">
+                                    <div class="rn-portfolio btn-portofolio" data-id="{{ $val->id }}"
+                                        {{-- data-bs-toggle="modal" data-bs-target="#modalPorto" --}}
+                                        >
+                                        <div class="inner">
+                                            <div class="thumbnail">
+                                                <a href="javascript:void(0)">
+                                                    <img src="{{ $val->image->path ?? '#' }}" alt="Personal Portfolio Images">
+                                                </a>
                                             </div>
-                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
+                                            <div class="content">
+                                                <div class="category-info">
+                                                    <div class="category-list">
+                                                        <a href="javascript:void(0)">{{ strtoupper($val->category) }}</a>
+                                                    </div>
+                                                </div>
+                                                <h4 class="title"><a href="javascript:void(0)">{{ strtoupper($val->name) }}</a></h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">WEBSITE</a>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">WEBSITE</a>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="{{ asset('public/assets/img/portofolio/modena.jpg') }}" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">WEBSITE</a>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">MODENA Website</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -408,7 +355,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modalPorto" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -417,39 +364,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row align-items-center">
-
-                        <div class="col-lg-6">
-                            <div class="portfolio-popup-thumbnail">
-                                <div class="image">
-                                    <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="text-content">
-                                <h3>
-                                    <span>Featured - Design</span> App Design Development.
-                                </h3>
-                                <p class="mb--30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
-                                <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
-                                <div class="button-group mt--20">
-                                    <a href="#" class="rn-btn thumbs-icon">
-                                        <span>LIKE THIS</span>
-                                        <i data-feather="thumbs-up"></i>
-                                    </a>
-                                    <a href="#" class="rn-btn">
-                                        <span>VIEW PROJECT</span>
-                                        <i data-feather="chevron-right"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <!-- End of .text-content -->
-                        </div>
-                    </div>
-                    <!-- End of .row Body-->
+                    <span class="loader"></span>
                 </div>
             </div>
         </div>
@@ -466,5 +381,26 @@
     <script src="{{ asset('public/assets/js/particles.js') }}"></script>
     <script src="{{ asset('public/assets/js/jquery-one-page-nav.js') }}"></script>
     <script src="{{ asset('public/assets/js/main.js') }}"></script>
+    <script>
+        $(".btn-portofolio").click(function() {
+            var s = $(this).data("id");
+            $("#modalPorto").find('.modal-body').html('<span class="loader"></span>')
+
+            $('#modalPorto').modal('show');
+            $.ajax({
+                url: "{{ url('portofolio-detail') }}/" + s,
+                type: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}"
+                },
+                success: function(s) {
+                    $("#modalPorto").find('.modal-body').html(s)
+                },
+                error: function(s) {
+                    var t = s.responseJSON;
+                }
+            })
+        })
+    </script>
 </body>
 </html>

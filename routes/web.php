@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [App\Http\Controllers\Frontend\IndexController::class, 'index']);
 Route::get('cv', [App\Http\Controllers\Frontend\IndexController::class, 'cv']);
 Route::post('contact', [App\Http\Controllers\Frontend\IndexController::class, 'store']);
+Route::post('portofolio-detail/{id}', [App\Http\Controllers\Frontend\IndexController::class, 'portofolioDetail']);
 
 Route::group(['prefix' => 'admin-cms'], function(){
     Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm']);
