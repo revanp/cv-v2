@@ -78,7 +78,7 @@
                 <ul class="primary-menu nav nav-pills onepagenav">
                     <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact Me</a></li>
                 </ul>
                 <div class="social-share-style-1 mt--40">
