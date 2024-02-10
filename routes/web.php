@@ -27,9 +27,35 @@ Route::group(['prefix' => 'admin-cms'], function(){
             Route::get('delete/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'delete']);
         });
 
+        Route::group(['prefix' => 'money-management'], function(){
+            Route::group(['prefix' => 'bank-account'], function(){
+                Route::get('', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'index']);
+                Route::post('datatable', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'index']);
+                Route::get('create', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'create']);
+                Route::post('create', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'store']);
+                Route::get('edit/{id}', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'edit']);
+                Route::put('edit/{id}', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'update']);
+                Route::put('change-status', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'changeStatus']);
+                Route::get('delete/{id}', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'delete']);
+            });
+        });
+
         Route::group(['prefix' => 'form-contact-us'], function(){
             Route::get('', [App\Http\Controllers\Backend\FormContactUsController::class, 'index']);
             Route::post('datatable', [App\Http\Controllers\Backend\FormContactUsController::class, 'index']);
+        });
+
+        Route::group(['prefix' => 'settings'], function(){
+            Route::group(['prefix' => 'users'], function(){
+                Route::get('', [App\Http\Controllers\Backend\Settings\UsersController::class, 'index']);
+                Route::post('datatable', [App\Http\Controllers\Backend\Settings\UsersController::class, 'index']);
+                Route::get('create', [App\Http\Controllers\Backend\Settings\UsersController::class, 'create']);
+                Route::post('create', [App\Http\Controllers\Backend\Settings\UsersController::class, 'store']);
+                Route::get('edit/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'edit']);
+                Route::put('edit/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'update']);
+                Route::put('change-status', [App\Http\Controllers\Backend\Settings\UsersController::class, 'changeStatus']);
+                Route::get('delete/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'delete']);
+            });
         });
     });
 });

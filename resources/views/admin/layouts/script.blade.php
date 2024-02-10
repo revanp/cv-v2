@@ -98,12 +98,18 @@
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     };
-    // @php
-    //     $flashMes = flash();
-    // @endphp
-    // @if(!empty($flashMes))
-    //     toastr.{{ $flashMes["type"] }}('{{ $flashMes["title"] }}', '{{ $flashMes["message"] }}');
-    // @endif
+
+    @if($message = Session::get('success'))
+        $(document).ready(function(){
+            toastr.success("{{ $message }}");
+        });
+    @endif
+
+    @if($message = Session::get('error'))
+        $(document).ready(function(){
+            toastr.error("{{ $message }}");
+        });
+    @endif
 </script>
 
 
