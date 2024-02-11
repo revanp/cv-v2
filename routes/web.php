@@ -38,6 +38,18 @@ Route::group(['prefix' => 'admin-cms'], function(){
                 Route::put('change-status', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'changeStatus']);
                 Route::get('delete/{id}', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'delete']);
             });
+
+            Route::group(['prefix' => 'incoming-money'], function(){
+                Route::get('', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'index']);
+                Route::post('datatable', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'index']);
+                Route::get('create', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'create']);
+                Route::post('create', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'store']);
+                Route::get('edit/{id}', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'edit']);
+                Route::put('edit/{id}', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'update']);
+                Route::get('delete/{id}', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'delete']);
+
+                Route::get('get-category', [App\Http\Controllers\Backend\MoneyManagement\IncomingMoneyController::class, 'getCategory']);
+            });
         });
 
         Route::group(['prefix' => 'form-contact-us'], function(){
@@ -53,7 +65,6 @@ Route::group(['prefix' => 'admin-cms'], function(){
                 Route::post('create', [App\Http\Controllers\Backend\Settings\UsersController::class, 'store']);
                 Route::get('edit/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'edit']);
                 Route::put('edit/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'update']);
-                Route::put('change-status', [App\Http\Controllers\Backend\Settings\UsersController::class, 'changeStatus']);
                 Route::get('delete/{id}', [App\Http\Controllers\Backend\Settings\UsersController::class, 'delete']);
             });
         });

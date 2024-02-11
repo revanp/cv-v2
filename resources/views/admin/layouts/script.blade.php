@@ -63,7 +63,34 @@
 <script src="{{ asset('public/backend/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6') }}"></script>
 <script src="{{ asset('public/backend/js/scripts.bundle.js?v=7.0.6') }}"></script>
 <script src="{{ asset('public/backend/plugins/custom/datatables/datatables.bundle.js?v=7.0.6') }}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
+    $('input[name="amount"]').on('change click keyup input paste', function(e){
+        $(this).val(function (index, value) {
+            return value.replace(/(?!\.)\D/g, "")
+                            .replace(/(?<=\..*)\./g, "")
+                            .replace(/(?<=\.\d\d).*/g, "")
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        });
+    });
+
+    $('.datepicker-transacation').datepicker({
+        todayBtn: "linked",
+        clearBtn: true,
+        orientation: "bottom left",
+        todayHighlight: true,
+        autoclose: true,
+        format: "dd MM yyyy",
+        endDate: '0'
+    });
+
+    $('.timepicker-input').timepicker({
+        minuteStep: 1,
+        defaultTime: '00:00',
+        showMeridian: false,
+        snapToStep: true,
+    });
+
     $(document).ready(function() {
         $('.file-input').change(function(){
             readImgUrlAndPreview(this);

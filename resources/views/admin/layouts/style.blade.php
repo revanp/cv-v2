@@ -12,6 +12,7 @@
 <link href="{{ asset('public/backend/css/themes/layout/brand/light.css?v=7.0.6') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('public/backend/css/themes/layout/aside/light.css?v=7.0.6') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('public/backend/plugins/custom/datatables/datatables.bundle.css?v=7.0.6') }}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
     .form-group__file {
         display: flex;

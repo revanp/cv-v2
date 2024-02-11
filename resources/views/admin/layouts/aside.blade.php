@@ -42,6 +42,10 @@
                                 <a href="{{ url('admin-cms/money-management/bank-account') }}" class="menu-link "><i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">Bank Account</span>
                                 </a>
                             </li>
+                            <li class="menu-item {{ (request()->is('admin-cms/money-management/incoming-money') ||  request()->is('admin-cms/money-management/incoming-money/*')) ? 'menu-item-active' : '' }}" aria-haspopup="true">
+                                <a href="{{ url('admin-cms/money-management/incoming-money') }}" class="menu-link "><i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">Incoming Money</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
