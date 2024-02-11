@@ -1,6 +1,6 @@
 <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed " >
 	<a href="{{ url('admin-cms') }}" style="display: block; color: #0d1013; text-transform: uppercase; letter-spacing: 6px; font-size: 14px; font-weight: 700; text-decoration: none;">
-        REVAN.
+        {{ explode(' ', Auth::user()->name)[0] }}.
     </a>
 
 	<div class="d-flex align-items-center">
