@@ -59,6 +59,9 @@ class BankAccountController extends Controller
                         return $rownum--;
                     }
                 })
+                ->editColumn('amount', function($data){
+                    return 'Rp. ' . number_format($data->amount, 0, '.', ',');
+                })
                 ->addColumn('is_active', function($data){
                     $id = $data->id;
                     $isActive = $data->is_active;

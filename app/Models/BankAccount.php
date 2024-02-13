@@ -15,6 +15,7 @@ class BankAccount extends Model
         'id_user',
         'name',
         'number',
+        'amount',
         'is_active',
     ];
 }

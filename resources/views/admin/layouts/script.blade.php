@@ -63,7 +63,6 @@
 <script src="{{ asset('public/backend/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6') }}"></script>
 <script src="{{ asset('public/backend/js/scripts.bundle.js?v=7.0.6') }}"></script>
 <script src="{{ asset('public/backend/plugins/custom/datatables/datatables.bundle.js?v=7.0.6') }}"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $('input[name="amount"]').on('change click keyup input paste', function(e){
         $(this).val(function (index, value) {

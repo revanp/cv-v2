@@ -169,7 +169,12 @@ class IncomingMoneyController extends Controller
                 'created_at' => date('Y-m-d H:i:s', strtotime($data['transaction_date'] . ' ' . $data['transaction_time'])),
             ])->save();
 
-            // $idBank = $bank->id;
+            $bank = BankAccount::find($data['id_bank_account']);
+            $lastAmount = $bank->amount;
+
+            $bank->fill([
+                'amount' => $lastAmount + str_replace(',', '', $data['amount']),
+            ])->save();
 
             $message = 'Incoming Money created successfully';
 
@@ -284,12 +289,21 @@ class IncomingMoneyController extends Controller
 
             $incoming = IncomingMoney::find($id);
 
+            $lastIncomingAmount = $incoming->amount;
+
             $incoming->fill([
                 'id_user' => Auth::user()->id,
                 'id_bank_account' => $data['id_bank_account'],
                 'id_incoming_money_category' => $category->id,
                 'amount' => str_replace(',', '', $data['amount']),
                 'created_at' => date('Y-m-d H:i:s', strtotime($data['transaction_date'] . ' ' . $data['transaction_time'])),
+            ])->save();
+
+            $bank = BankAccount::find($data['id_bank_account']);
+            $lastAmount = $bank->amount - $lastIncomingAmount;
+
+            $bank->fill([
+                'amount' => $lastAmount + str_replace(',', '', $data['amount']),
             ])->save();
 
             $message = 'Incoming Money updated successfully';

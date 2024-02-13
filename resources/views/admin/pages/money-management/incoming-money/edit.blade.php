@@ -118,20 +118,20 @@
         })
     });
 
-    $( 'input[name="category"]' ).autocomplete({
-        source: function(request, response){
-            $.ajax({
-                url: "{{ url('admin-cms/money-management/incoming-money/get-category') }}",
-                type: 'GET',
-                dataType: 'json',
-                data: {
-                    term: request.term
-                },
-                success: function(data){
-                    response(data);
-                }
-            })
-        }
-    });
+    // $( 'input[name="category"]' ).autocomplete({
+    //     source: function(request, response){
+    //         $.ajax({
+    //             url: "{{ url('admin-cms/money-management/incoming-money/get-category') }}",
+    //             type: 'GET',
+    //             dataType: 'json',
+    //             data: {
+    //                 term: request.term
+    //             },
+    //             success: function(data){
+    //                 response(data);
+    //             }
+    //         })
+    //     }
+    // });
 </script>
 @endsection

@@ -42,6 +42,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Number</th>
+                                    <th>Amount</th>
                                     <th>Status</th>
                                     <th>Actions</th>
                                 </tr>
@@ -77,6 +78,7 @@
             columns: [
                 {data: 'name'},
                 {data: 'number'},
+                {data: 'amount'},
                 {data: 'is_active', searchable: false, orderable: false, 'className': 'text-center'},
                 {data: 'action', responsivePriority: -1, searchable: false, orderable: false, 'className': 'text-center'},
             ],
