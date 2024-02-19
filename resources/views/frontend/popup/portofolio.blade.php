@@ -13,7 +13,7 @@
                 <span>{{ $data->category }}</span> {{ $data->name }}
             </h3>
             <p>
-                {{ $data->description }}
+                {!! str_replace("\r\n", "<br>", $data->description) !!}
             </p>
             @if (!empty($data->url))
                 <div class="button-group mt--20">

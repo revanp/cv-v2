@@ -72,7 +72,7 @@
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription">Back-End Developer and working for MODENA Indonesia in Jakarta, Indonesia</p>
+                <p class="discription">Back-End Developer and Available for full-time or freelance opportunities 👋🏻</p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills onepagenav">
@@ -124,7 +124,7 @@
                                                 <h2 class="title">
                                                     Hi, I’m <span>REVAN</span>
                                                 </h2>
-                                                <p class="disc">Back-End Developer and working for MODENA Indonesia in Jakarta, Indonesia</p>
+                                                <p class="discription">Back-End Developer and Available for full-time or freelance opportunities 👋🏻</p>
                                             </div>
                                             <div class="user-info-footer">
                                                 <div class="info">
@@ -230,9 +230,7 @@
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
                             @foreach ($portofolio as $key => $val)
                                 <div class="rn-portfolio-slick">
-                                    <div class="rn-portfolio btn-portofolio" data-id="{{ $val->id }}"
-                                        {{-- data-bs-toggle="modal" data-bs-target="#modalPorto" --}}
-                                        >
+                                    <div class="rn-portfolio btn-portofolio" data-id="{{ $val->id }}">
                                         <div class="inner">
                                             <div class="thumbnail">
                                                 <a href="javascript:void(0)">

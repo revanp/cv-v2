@@ -163,6 +163,9 @@
             $('.portfolio-slick-activation').slick({
                 infinite: true,
                 slidesToShow: 3,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1000,
                 slidesToScroll: 1,
                 dots: false,
                 arrows: true,
