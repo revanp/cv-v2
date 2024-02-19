@@ -167,7 +167,7 @@
                 autoplaySpeed: 5000,
                 speed: 1000,
                 slidesToScroll: 1,
-                dots: false,
+                dots: true,
                 arrows: true,
                 cssEase: 'linear',
                 adaptiveHeight: true,
