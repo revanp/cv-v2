@@ -20,7 +20,7 @@ class IncomingMoneyController extends Controller
         $incomingMoney = IncomingMoney::select(DB::raw('IFNULL(SUM(amount), 0) as amount'))
             ->where(function($query){
                 $query->where('created_at', '>=', date('Y-m-d', strtotime('first day of last month')));
-                $query->where('created_at', '<=', date('Y-m-d'));
+                $query->where('created_at', '<=', date('Y-m-d H:i:s'));
             })
             ->where('id_user', $user->id)
             ->first();
