@@ -27,6 +27,17 @@ Route::group(['prefix' => 'admin-cms'], function(){
             Route::get('delete/{id}', [App\Http\Controllers\Backend\PortofolioController::class, 'delete']);
         });
 
+        Route::group(['prefix' => 'skills'], function(){
+            Route::get('', [App\Http\Controllers\Backend\SkillsController::class, 'index']);
+            Route::post('datatable', [App\Http\Controllers\Backend\SkillsController::class, 'index']);
+            Route::get('create', [App\Http\Controllers\Backend\SkillsController::class, 'create']);
+            Route::post('create', [App\Http\Controllers\Backend\SkillsController::class, 'store']);
+            Route::get('edit/{id}', [App\Http\Controllers\Backend\SkillsController::class, 'edit']);
+            Route::put('edit/{id}', [App\Http\Controllers\Backend\SkillsController::class, 'update']);
+            Route::put('change-status', [App\Http\Controllers\Backend\SkillsController::class, 'changeStatus']);
+            Route::get('delete/{id}', [App\Http\Controllers\Backend\SkillsController::class, 'delete']);
+        });
+
         Route::group(['prefix' => 'money-management'], function(){
             Route::group(['prefix' => 'bank-account'], function(){
                 Route::get('', [App\Http\Controllers\Backend\MoneyManagement\BankAccountController::class, 'index']);

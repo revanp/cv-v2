@@ -181,33 +181,9 @@
                         <div class="skill-share-inner pt--80">
                             <span class="title">Best Skills on</span>
                             <ul class="skill-share liststyle">
-                                <li><img src="{{ asset('public/assets/img/icon/php.svg') }}" alt="PHP"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/reactjs.svg') }}" alt="ReactJS"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/laravel.svg') }}" alt="Laravel"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/docker.svg') }}" alt="Docker"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/kubernetes.svg') }}" alt="Kubernetes"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/centos.svg') }}" alt="CentOS"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/ubuntu.svg') }}" alt="Ubuntu"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/js.svg') }}" alt="Javascript"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/flutter.svg') }}" alt="Flutter"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/python.svg') }}" alt="Python"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/mysql.svg') }}" alt="MySQL"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/postgresql.svg') }}" alt="PostgreSQL"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/mongodb.svg') }}" alt="MongoDB"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/html5.svg') }}" alt="HTML 5"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/jenkins.svg') }}" alt="Jenkins"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/css.svg') }}" alt="CSS"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/sqlserver.svg') }}" alt="Microsoft SQL Server"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/apache.svg') }}" alt="Apache"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/nginx.svg') }}" alt="Nginx"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/codeigniter.svg') }}" alt="Codeigniter"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/cakephp.svg') }}" alt="CakePHP"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/bootstrap.svg') }}" alt="Bootstrap"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/tailwind.svg') }}" alt="Tailwind"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/git.svg') }}" alt="Git"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/npm.svg') }}" alt="NPM"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/figma.svg') }}" alt="Figma"></li>
-                                <li><img src="{{ asset('public/assets/img/icon/wordpress.svg') }}" alt="Wordpress"></li>
+                                @foreach ($skills as $key => $val)
+                                    <li><img src="{{ $val->image->path ?? '' }}" alt="{{ $val->name }}"></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

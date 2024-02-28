@@ -25,6 +25,12 @@
                     </li>
                 @endif
 
+                @if (Auth::user()->email == 'revanp0@gmail.com')
+                    <li class="menu-item {{ (request()->is('admin-cms/skills') ||  request()->is('admin-cms/skills/*')) ? 'menu-item-active' : '' }}" aria-haspopup="true" >
+                        <a href="{{ url('admin-cms/skills') }}" class="menu-link "><i class="flaticon2-laptop menu-icon"></i><span class="menu-text">Skills</span></a>
+                    </li>
+                @endif
+
                 <li class="menu-item menu-item-submenu {{ (request()->is('admin-cms/money-management') ||  request()->is('admin-cms/money-management/*')) ? 'menu-item-active' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="flaticon2-pie-chart menu-icon"></i><span class="menu-text">Money Management</span>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\FormContactUs;
 use App\Models\Portofolio;
+use App\Models\Skill;
 
 class IndexController extends Controller
 {
@@ -18,7 +19,14 @@ class IndexController extends Controller
         ->orderBy('sort')
         ->get();
 
-        return view('frontend.index', compact('portofolio'));
+        $skills = Skill::with([
+            'image'
+        ])
+        ->where('is_active', 1)
+        ->orderBy('sort')
+        ->get();
+
+        return view('frontend.index', compact('portofolio', 'skills'));
     }
 
     public function cv()
